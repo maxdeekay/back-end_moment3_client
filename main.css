@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(100, 100, 100);
+    color: white;
+    font-family: Open Sans, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+nav li {
+    background-color: rgb(40, 40, 40);
+    border-radius: 0px 5px 5px 0px;
+}
+
+nav li:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    padding: 20px 10px 20px 10px;
+}
+
+.active { background-color: rgb(60, 60, 60); }
+
+#xp-container, #add-container, #about-container {
+    max-width: 30em;
+    width: 95%;
+}
+
+#xp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#xp-container>h1 { text-align: center; }
+
+#xp-container>div {
+    background-color: rgb(40, 40, 40);
+    padding: 10px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.xp-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+button, input[type=submit] {
+    border: 0;
+    width: 70px;
+    height: 30px;
+    align-self: end;
+    font-weight: 700;
+    border-radius: 5px;
+    font-family: Open Sans;
+}
+
+#xp-container button { background-color: rgb(214, 94, 94); }
+#add-form input[type=submit] { background-color: rgb(28, 207, 28); }
+#xp-container button:hover { cursor: pointer; background-color: rgb(204, 128, 128);}
+#add-form input[type=submit]:hover { cursor: pointer; background-color: rgb(107, 202, 107); }
+
+/* ADD FORM */
+#add-form {
+    background-color: rgb(40, 40, 40);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-form>div>input[type=text] {
+    border: 0;
+    background-color: rgb(100, 100, 100);
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 5px;
+    color: white;
+}
+
+#add-form>div>input[type=text]:focus,
+#add-form>div>input[type=date]:focus,
+#add-form>div>textarea:focus { outline: 2px solid white; }
+
+#add-form>div>textarea {
+    background-color: rgb(100, 100, 100);
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    font-family: Open Sans;
+    resize: none;
+    padding: 5px;
+}
+
+#add-form>div>input[type=date] {
+    background-color: rgb(100, 100, 100);
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+    padding: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+#add-form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+#add-form label {
+    font-size: 20px;;
+}
+
+#add-form span {
+    color: lightgrey;
+    font-style: italic;
+}
+
+#about-container {
+    background-color: rgb(40,40, 40);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#message {
+    color: black;
+    width: 400px;
+    max-width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 46px;
+    position: absolute;
+    top: 10%;
+    display: none;
+}
+
+.error { background-color: rgb(179, 88, 88); }
+.success { background-color: rgb(79, 219, 137); }

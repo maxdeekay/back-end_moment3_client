@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="add.js"></script>
+    <title>Add</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">CV</a></li>
+            <li class="active"><a href="add.html">ADD</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </nav>
+
+    <h1>Lägg till arbetserfarenhet</h1>
+
+    <div id="add-container">
+        <form id="add-form">
+            <div>
+                <label for="companyname">Företag</label>
+                <input type="text" name="companyname" id="companyname">
+            </div>
+            <div>
+                <label for="jobtitle">Titel</label>
+                <input type="text" name="jobtitle" id="jobtitle">
+            </div>
+            <div>
+                <label for="location">Plats</label>
+                <input type="text" name="location" id="location">
+            </div>
+
+            <div>
+                <label for="description">Beskrivning</label>
+                <textarea cols="40" rows="6" name="description" id="description"></textarea>
+            </div>
+
+            <input type="submit" value="LÄGG TILL">
+        </form>
+    </div>
+
+    <div id="message">
+    </div>
+</body>
+</html>
